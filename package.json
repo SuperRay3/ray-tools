@@ -2,19 +2,29 @@
   "name": "raytk-next",
   "version": "0.0.1",
   "description": "ray's toolkit",
-  "main": "dist/index.js",
+	"keywords": [
+    "utils"
+  ],
+	"author": "SuperRay3<https://github.com/SuperRay3>",
+	"main": "dist/main/index.js",
+  "typings": "dist/main/index.d.ts",
+  "module": "dist/module/index.js",
+	"files": [
+    "/dist"
+  ],
   "scripts": {
-    "test": "jest"
+    "build": "npm run clean && npm run build:main && npm run build:module",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint:fix": "npm run lint -- --fix",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SuperRay3/raytk-next.git"
   },
-  "keywords": [
-    "utils"
-  ],
-  "author": "SuperRay3<https://github.com/SuperRay3>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SuperRay3/raytk-next/issues"
   },
@@ -24,7 +34,9 @@
     "@types/node": "12.12.17",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "6.7.2",
+    "eslint-plugin-jest": "^23.1.1",
     "jest": "24.9.0",
+    "rimraf": "^3.0.0",
     "ts-jest": "24.2.0",
     "typescript": "3.7.3"
   },
@@ -32,5 +44,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "license": "MIT"
 }
