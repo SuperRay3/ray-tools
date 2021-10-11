@@ -2,14 +2,14 @@
   "name": "raytk-next",
   "version": "0.0.1",
   "description": "ray's toolkit",
-	"keywords": [
+  "keywords": [
     "utils"
   ],
-	"author": "SuperRay3<https://github.com/SuperRay3>",
-	"main": "dist/main/index.js",
+  "author": "SuperRay3<https://github.com/SuperRay3>",
+  "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",
-	"files": [
+  "files": [
     "/dist"
   ],
   "scripts": {
