@@ -17,7 +17,7 @@
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "test": "jest",
-    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf dist"
   },
@@ -32,6 +32,8 @@
   "devDependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.17",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "6.7.2",
     "eslint-plugin-jest": "^23.1.1",

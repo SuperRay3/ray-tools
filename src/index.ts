@@ -5,8 +5,8 @@
  */
 
  export const fixedRound = (number: number, m = 2): string => {
-  let result = Math.round(Math.pow(10, m) * number) / Math.pow(10, m)
-  let resultStr: string = String(result)
+  const result = Math.round(Math.pow(10, m) * number) / Math.pow(10, m)
+  let resultStr = String(result)
 
   if (resultStr.indexOf('.') === -1) {
     if (m !== 0) {
