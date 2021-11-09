@@ -1,6 +1,6 @@
 {
-  "name": "raytk-next",
-  "version": "0.0.2",
+  "name": "ray-tools",
+  "version": "0.0.1",
   "description": "ray's toolkit",
   "keywords": [
     "utils"
@@ -23,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuperRay3/raytk-next.git"
+    "url": "git+https://github.com/SuperRay3/ray-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/SuperRay3/raytk-next/issues"
+    "url": "https://github.com/SuperRay3/ray-tools/issues"
   },
-  "homepage": "https://github.com/SuperRay3/raytk-next#readme",
+  "homepage": "https://github.com/SuperRay3/ray-tools#readme",
   "devDependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.17",
