@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
     "lib": [
       "esnext",
       "esnext.asynciterable",
-      "dom"
+      "dom",
     ],
     "esModuleInterop": true,
     "sourceMap": true,
