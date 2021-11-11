@@ -72,3 +72,19 @@ export function parseTime(time: Date | string | number, pattern: string): string
  * @param ms 暂停运行的时间（毫秒）
  */
 export const sleep = (ms: number):Promise<void> => new Promise((resolve) => setTimeout(resolve, ms))
+
+/**
+* 安全获取对象属性
+* @param func 要获取的属性
+* @param fallbackValue 默认值
+* @tutorial (() => a.b, 'peace & love')
+*/
+
+export const getVal = <T, R>(func: () => T, fallbackValue: R): (T | R) => {
+  try {
+    const value = func()
+    return (value === null || value === undefined) ? fallbackValue : value
+  } catch (e) {
+    return fallbackValue
+  }
+}
