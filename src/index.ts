@@ -88,3 +88,12 @@ export const getVal = <T, R>(func: () => T, fallbackValue: R): (T | R) => {
     return fallbackValue
   }
 }
+
+/**
+ * 生成等差数列
+ * @param max 最大值
+ * @param min 最小值
+ * @param step 步长值
+ * @returns 等差数组
+ */
+export const arithmeticSequence = (max = 10, min = 0, step = 1): number[] => Array((max - min) / step + 1).join(' ').split(' ').map((e, i) => step + i * step)
