@@ -80,7 +80,8 @@ export const sleep = (ms: number):Promise<void> => new Promise((resolve) => setT
 * @tutorial (() => a.b, 'peace & love')
 */
 
-export const getVal = <T, R>(func: () => T, fallbackValue: R): (T | R) => {
+export type getValType = <T, R>(func: () => T, fallbackValue: R) => (T | R)
+export const getVal: getValType = (func, fallbackValue) => {
   try {
     const value = func()
     return (value === null || value === undefined) ? fallbackValue : value
