@@ -19,7 +19,8 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+		"lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -37,10 +38,18 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "6.7.2",
     "eslint-plugin-jest": "^23.1.1",
+    "husky": "^7.0.0",
     "jest": "24.9.0",
+    "lint-staged": "^12.0.3",
     "rimraf": "^3.0.0",
     "ts-jest": "24.2.0",
     "typescript": "3.7.3"
+  },
+	"lint-staged": {
+    "src/**/*.{js,ts,tsx,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
